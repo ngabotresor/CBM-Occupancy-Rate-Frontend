@@ -62,7 +62,10 @@ const Market = () => {
       <div className="flex justify-between items-center">
         <Header market="Page" title="Markets" />
         <button
-          onClick={() => { handleClick('marketModal') }}
+          onClick={() => { 
+            setEditMart('')
+            handleClick('marketModal')
+          }}
           type="button"
           style={{ backgroundColor: currentColor }}
           className="flex justify-between items-center text-sm opacity-0.9  text-white  hover:drop-shadow-xl rounded-xl p-2"

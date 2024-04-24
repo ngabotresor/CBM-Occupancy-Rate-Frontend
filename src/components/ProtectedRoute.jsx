@@ -5,13 +5,12 @@ import { selectCurrentToken, selectCurrentUser } from '../services/authSlice'
 const ProtectedRoute = ({ children }) => {
 
    const token = useSelector(selectCurrentToken)
-   const currentUser = useSelector(selectCurrentUser)
    if (!token) {
       return <Navigate to="/signin" />
    }
-   if (!currentUser.is_approved) {
-      return <Navigate to="/unauthorized" />
-   }
+   // if (!currentUser.is_approved) {
+   //    return <Navigate to="/unauthorized" />
+   // }
 
    return children
 }

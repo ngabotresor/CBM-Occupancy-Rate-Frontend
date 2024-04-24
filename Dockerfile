@@ -10,7 +10,7 @@ COPY . .
 
 RUN npm run build
 
-FROM node:carbon
+FROM node:18-alpine
 
 RUN npm install -g serve
 
